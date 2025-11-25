@@ -1,0 +1,12 @@
+com\example\filestats\output\JsonFormatter.class
+com\example\filestats\FileStatsApplication.class
+com\example\filestats\GitIgnoreFilter.class
+com\example\filestats\model\FileStats.class
+com\example\filestats\FileAnalyzer.class
+com\example\filestats\output\XmlFormatter.class
+com\example\filestats\model\ExtStats.class
+com\example\filestats\output\PlainFormatter.class
+com\example\filestats\FileProcessor.class
+com\example\filestats\Main.class
+com\example\filestats\output\Formatter.class
+com\example\filestats\model\Options.class

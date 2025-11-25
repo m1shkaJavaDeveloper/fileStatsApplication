@@ -14,6 +14,15 @@
 
 ---
 
+## Сборка
+
+Собрать JAR с зависимостями:
+
+```bash
+cd C:\Projects\FILESTAT\sources
+mvn clean package
+
+```
 
 
 Аргументы
@@ -27,5 +36,30 @@
 7. --git-ignore - не обрабатывать файлы указанные в файле .gitignore
 8. --output=<plain,xml,json> - формат вывода статистики
 
+Примеры запуска
 
+```bash
+# 1. Простейший анализ каталога src
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src
+
+# 2. Рекурсивно и только java/md файлы
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --include-ext=java,md
+
+# 3. С игнорированием файлов из .gitignore
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --git-ignore
+
+# 4. С ограничением глубины обхода
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --max-depth=2
+
+# 5. Использовать 10 потоков
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --thread=10
+
+# 6. Исключить определённые расширения
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --exclude-ext=log,tmp
+
+# 7. Вывод в JSON
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --output=json
+
+# 8. Вывод в XML
+java -jar target/filestats-1.0-SNAPSHOT-shaded.jar src --recursive --output=xml
 
